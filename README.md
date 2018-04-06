@@ -1,4 +1,4 @@
-﻿SprawdzaczWersji ver 0.2
+﻿SprawdzaczWersji ver 0.3
 
 Prosta aplikacja sprawdzająca czy są zainstalowane aktualne wersje standardowych aplikacji i w miarę potrzeby instaluje lub aktualizuje.
 
