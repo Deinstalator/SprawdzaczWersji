@@ -17,3 +17,7 @@ Aplikacja sprawdza i wypisuje wersje zainstalowanych programów:
 Update 0.2 
 
 Zmiana sposobu sprawdzania wersji programu. Teraz robione jest to w rejestrze co niweluje problem innych nazw folderów w różnych wersjach jak w np. javie.
+
+Update 0.3
+
+Jeżeli któraś z obsługiwanych aplikacji jest w innej wersji niż zalecana lub wcalenie nie jest zainstalowana to uruchamiane są instalatory tych aplikacji.
