@@ -1,4 +1,4 @@
-﻿SprawdzaczWersji ver 0.3
+﻿SprawdzaczWersji wersja 1.0 FINAl
 
 Prosta aplikacja sprawdzająca czy są zainstalowane aktualne wersje standardowych aplikacji i w miarę potrzeby instaluje lub aktualizuje.
 
@@ -21,3 +21,7 @@ Zmiana sposobu sprawdzania wersji programu. Teraz robione jest to w rejestrze co
 Update 0.3
 
 Jeżeli któraś z obsługiwanych aplikacji jest w innej wersji niż zalecana lub wcalenie nie jest zainstalowana to uruchamiane są instalatory tych aplikacji.
+
+Update 1.0
+
+Aplikacja poprawnie wyszukuje wszystkie obsługiwane aplikace. Dodano wtyczki flash i silverlight. Zaimplementowano pasek postępu.
