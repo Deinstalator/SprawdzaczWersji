@@ -1,4 +1,4 @@
-﻿SprawdzaczWersji wersja 1.0 FINAl
+﻿SprawdzaczWersji wersja 1.0 FINAL
 
 Prosta aplikacja sprawdzająca czy są zainstalowane aktualne wersje standardowych aplikacji i w miarę potrzeby instaluje lub aktualizuje.
 
