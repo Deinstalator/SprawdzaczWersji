@@ -13,7 +13,7 @@ namespace SprawdzaczWersji
 
         private void about_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Wersja 0.3\n\nAplikacja sprawdza zainstalowane standardowe programy i w razie potrzeby instaluje lub aktualizuje.", "O sprawdzaczu");
+            MessageBox.Show("Wersja 1.0 FINAL\n\nAplikacja sprawdza zainstalowane standardowe programy i w razie potrzeby instaluje lub aktualizuje.", "O sprawdzaczu");
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -23,13 +23,26 @@ namespace SprawdzaczWersji
         
         private void check_Click(object sender, EventArgs e)
         {
+            output.Items.Clear();
+
             Check check = new Check();
 
-            output.Items.Add(check.checkInstalled("7-Zip") + " | " + check.okOrNot("7-zip", check.SevenZip));
+            output.Items.Add(check.checkInstalled("Zip") + " | " + check.okOrNot("Zip", check.SevenZip));
+            progressBar1.Increment(1);
             output.Items.Add(check.checkInstalled("Google Chrome") + " | " + check.okOrNot("Google Chrome", check.Chrome));
+            progressBar1.Increment(1);
             output.Items.Add(check.checkInstalled("Adobe Acrobat Reader") + " | " + check.okOrNot("Adobe Acrobat Reader", check.Reader));
-            output.Items.Add(check.checkInstalled("Firefox") + " | " + check.okOrNot("Firefox", check.Firefox));
+            progressBar1.Increment(1);
+            output.Items.Add(check.checkInstalled("Mozilla Firefox") + " | " + check.okOrNot("Firefox", check.Firefox));
+            progressBar1.Increment(1);
             output.Items.Add(check.checkInstalled("Java") + " | " + check.okOrNot("Java", check.Java));
+            progressBar1.Increment(1);
+            output.Items.Add(check.checkInstalled("NPAPI") + " | " + check.okOrNot("NPAPI", check.Npapi));
+            progressBar1.Increment(1);
+            output.Items.Add(check.checkInstalled("PPAPI") + " | " + check.okOrNot("PPAPI", check.Ppapi));
+            progressBar1.Increment(1);
+            output.Items.Add(check.checkInstalled("Silver") + " | " + check.okOrNot("Silver", check.Silverlight));
+            progressBar1.Increment(1);
         }
 
         private void update_Click(object sender, EventArgs e)
@@ -41,7 +54,10 @@ namespace SprawdzaczWersji
                     @"instalki\ChromeStandaloneSetup64.exe",
                     @"instalki\AcroRdrDC1800920044_pl_PL.exe",
                     @"instalki\Firefox Setup 59.0.2.exe",
-                    @"instalki\jre-8u131-windows-i586.exe"
+                    @"instalki\jre-8u131-windows-i586.exe",
+                    @"instalki\install_flash_player.exe",
+                    @"instalki\install_flash_player_ppapi.exe",
+                    @"instalki\Silverlight_x64.exe",
                 };
 
 
@@ -56,7 +72,7 @@ namespace SprawdzaczWersji
                 {
                     try
                     {
-                        if (listaAplikacji[i].Contains("inna") || listaAplikacji[i].Contains("Meh"))
+                        if (listaAplikacji[i].Contains("inna") || listaAplikacji[i].Contains("znalazłem"))
                         {
                             var process = Process.Start(directory[i]);
                             process.WaitForExit();
